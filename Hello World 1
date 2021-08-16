@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+void main() {
+  runApp(MyButton());
+}
+class MyButton extends StatelessWidget {
+  //MyButton({Key key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          centerTitle:true,
+          title: Text('Hello'),
+
+        ),
+        body:Center(
+       child: Container(
+          width: 150,
+          height:45,
+         // padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+          decoration:  BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            color: Colors.deepOrange,
+          ),
+            alignment: Alignment.center,
+          child: Text('Hello, World!', style: TextStyle(color: Colors.white)),
+
+        )
+        )
+        ),
+    );
+
+  }
+}
+
