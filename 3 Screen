@@ -1,0 +1,1000 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: ' Hello',
+    home: MyHomePage(),
+  ));
+}
+
+class MyHomePage extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black45,
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(' MoviesHunt'),
+      ),
+      body:Container(
+      child:GestureDetector(
+          onTap: (){
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context)=> MovieDetails(),),);
+    },
+
+
+       child: ListView   (
+
+         scrollDirection: Axis.horizontal,
+    children: [
+    Column (
+
+    children:[
+      
+    // scrollDirection: Axis.horizontal,
+    Row(
+    children:[
+    Column
+    (
+    children:  [
+    Container(
+    width: 150,
+    height: 250,
+    decoration:  BoxDecoration(
+    borderRadius: BorderRadius.circular(15),
+    // color: Colors.deepOrange,
+    image:DecorationImage(
+    image:NetworkImage(
+    "https://upload.wikimedia.org/wikipedia/ar/f/f9/TheAvengers2012Poster.jpg",
+    ),
+    fit:BoxFit.cover,
+    ),
+    ),
+
+    ),
+    Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+    //SizedBox(width: 50),
+    Text('Avengers :VI' , style: TextStyle(color: Colors.white ,
+    fontSize: 15,
+    fontWeight: FontWeight.w600),
+    ),
+    Row(
+
+    children: [
+    SizedBox(width: 10),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    SizedBox(width: 10),
+    Text( '5.0 K reiews' , style: TextStyle(color: Colors.white ,
+    fontWeight: FontWeight.w500),)
+    ],
+    ),
+    Row(
+
+    children: [
+
+    SizedBox(width: 10),
+    Icon(Icons.alarm, color: Colors.white ,size:14),
+    SizedBox(width: 10),
+    Text( '2h 14m' , textDirection: TextDirection.rtl ,
+    style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+    ],
+
+    ),
+
+
+    ],
+
+
+    ),
+    ],
+    ),//1
+    //2
+    Column
+    (
+    children:  [SizedBox(width: 10),
+    Container(
+    width: 150,
+    height: 250,
+    decoration:  BoxDecoration(
+    borderRadius: BorderRadius.circular(15),
+    // color: Colors.deepOrange,
+    image:DecorationImage(
+    image:NetworkImage(
+    "https://image.api.playstation.com/vulcan/img/rnd/202105/1714/WHeOu95nW2SZQy6H5IKgE2Bg.png",
+    ),
+    fit:BoxFit.cover,
+    ),
+    ),
+
+    ),
+    Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+    //SizedBox(width: 50),
+    Text('Star Wars :IV' , style: TextStyle(color: Colors.white ,
+    fontSize: 15,
+    fontWeight: FontWeight.w600),
+    ),
+    Row(
+
+    children: [
+    SizedBox(width: 10),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    SizedBox(width: 10),
+    Text( '2.0 K reiews' , style: TextStyle(color: Colors.white ,
+    fontWeight: FontWeight.w500),)
+    ],
+    ),
+    Row(
+
+    children: [
+
+    SizedBox(width: 10),
+    Icon(Icons.alarm, color: Colors.white ,size:14),
+    SizedBox(width: 10),
+    Text( '2h 14m' , textDirection: TextDirection.rtl ,
+    style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+    ],
+    ),
+    ],
+    ),
+    ],
+    ),//2
+    //3
+    Column
+    (
+    children:  [SizedBox(width: 10),
+    Container(
+    width: 150,
+    height: 250,
+    decoration:  BoxDecoration(
+    borderRadius: BorderRadius.circular(15),
+    // color: Colors.deepOrange,
+    image:DecorationImage(
+    image:NetworkImage(
+    "https://i.egycdn.com/pic/WmFwZndlY21Udm1wcG1tcGpFY21IY1B4bW12Y21ydw.jpg",
+    ),
+    fit:BoxFit.cover,
+    ),
+    ),
+
+    ),
+    Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+    //SizedBox(width: 50),
+    Text('Mission Imp' , style: TextStyle(color: Colors.white ,
+    fontSize: 15,
+    fontWeight: FontWeight.w600),
+    ),
+    Row(
+
+    children: [
+    SizedBox(width: 10),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    SizedBox(width: 10),
+    Text( '1.36 K reiews' , style: TextStyle(color: Colors.white ,
+    fontWeight: FontWeight.w500),)
+    ],
+    ),
+    Row(
+
+    children: [
+
+    SizedBox(width: 10),
+    Icon(Icons.alarm, color: Colors.white ,size:14),
+    SizedBox(width: 10),
+    Text( '2h 14m' , textDirection: TextDirection.rtl ,
+    style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+    ],
+
+    ),
+
+
+    ],
+
+
+    ),
+    ],
+    ),//3
+    ],
+    ),//1
+    //2
+    Row(
+    children:[
+    Column
+    (
+    children:  [
+    Container(
+    width: 150,
+    height: 250,
+    decoration:  BoxDecoration(
+    borderRadius: BorderRadius.circular(15),
+    // color: Colors.deepOrange,
+    image:DecorationImage(
+    image:NetworkImage(
+    "https://qesatt-felem.org/wp-content/uploads/2020/01/avengersendgame.jpg",
+    ),
+    fit:BoxFit.cover,
+    ),
+    ),
+
+    ),
+    Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+    //SizedBox(width: 50),
+    Text('Avengers :III' , style: TextStyle(color: Colors.white ,
+    fontSize: 15,
+    fontWeight: FontWeight.w600),
+    ),
+    Row(
+
+    children: [
+    SizedBox(width: 10),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    SizedBox(width: 10),
+    Text( '32.2 K reiews' , style: TextStyle(color: Colors.white ,
+    fontWeight: FontWeight.w500),)
+    ],
+    ),
+    Row(
+
+    children: [
+
+    SizedBox(width: 10),
+    Icon(Icons.alarm, color: Colors.white ,size:14),
+    SizedBox(width: 10),
+    Text( '2h 14m' , textDirection: TextDirection.rtl ,
+    style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+    ],
+
+    ),
+
+
+    ],
+
+
+    ),
+    ],
+    ),//1
+    //2
+    Column
+    (
+    children:  [SizedBox(width: 10),
+    Container(
+    width: 150,
+    height: 250,
+    decoration:  BoxDecoration(
+    borderRadius: BorderRadius.circular(15),
+    // color: Colors.deepOrange,
+    image:DecorationImage(
+    image:NetworkImage(
+    "https://m.media-amazon.com/images/I/81bEk4cFbHL._SL1500_.jpg",
+    ),
+    fit:BoxFit.cover,
+    ),
+    ),
+
+    ),
+    Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+    //SizedBox(width: 50),
+    Text('Jurassic World' , style: TextStyle(color: Colors.white ,
+    fontSize: 15,
+    fontWeight: FontWeight.w600),
+    ),
+    Row(
+
+    children: [
+    SizedBox(width: 10),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star, color: Colors.blue , size:14),
+    Icon(Icons.star_border, color: Colors.blue , size:14),
+    SizedBox(width: 10),
+    Text( '3.2 K reiews' , style: TextStyle(color: Colors.white ,
+    fontWeight: FontWeight.w500),)
+    ],
+    ),
+                  Row(
+
+                    children: [
+
+                      SizedBox(width: 10),
+                      Icon(Icons.alarm, color: Colors.white ,size:14),
+                      SizedBox(width: 10),
+                      Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                          style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),//2
+          //3
+          Column
+            (
+            children:  [SizedBox(width: 10),
+              Container(
+                width: 150,
+                height: 250,
+                decoration:  BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  // color: Colors.deepOrange,
+                  image:DecorationImage(
+                    image:NetworkImage(
+                      "https://pbs.twimg.com/media/EMjk8X0WsAAYtnH.jpg:large",
+                    ),
+                    fit:BoxFit.cover,
+                  ),
+                ),
+
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //SizedBox(width: 50),
+                  Text('Star Wars:IV' , style: TextStyle(color: Colors.white ,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600),
+                  ),
+                  Row(
+
+                    children: [
+                      SizedBox(width: 10),
+                      Icon(Icons.star, color: Colors.blue , size:14),
+                      Icon(Icons.star, color: Colors.blue , size:14),
+                      Icon(Icons.star, color: Colors.blue , size:14),
+                      Icon(Icons.star_border, color: Colors.blue , size:14),
+                      Icon(Icons.star_border, color: Colors.blue , size:14),
+                      SizedBox(width: 10),
+                      Text( '3.0 K reiews' , style: TextStyle(color: Colors.white ,
+                          fontWeight: FontWeight.w500),)
+                    ],
+                  ),
+                  Row(
+
+                    children: [
+
+                      SizedBox(width: 10),
+                      Icon(Icons.alarm, color: Colors.white ,size:14),
+                      SizedBox(width: 10),
+                      Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                          style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                    ],
+
+                  ),
+                ],
+              ),
+            ],
+          ),//3
+        ],
+      ),
+        ],
+  ),
+  ],
+
+    ),
+    ),
+    ),
+     );
+
+
+  }
+}
+//second screen
+class MovieDetails extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.black45,
+        appBar: AppBar(
+       // centerTitle: true,
+        title: Text(' Now Playing'),
+    ),
+    body:Container(
+      child:GestureDetector(
+        onTap: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context)=> Movie(),),);
+        },
+
+//1
+      child:ListView(
+        children: [
+          Container   (
+
+          margin: EdgeInsets.all(8),
+          height: 100,
+          child:Row(
+            children:[
+              SizedBox(width: 10),
+              Container(
+                width: 150,
+                height: 200,
+                decoration:  BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  // color: Colors.deepOrange,
+                  image:DecorationImage(
+                    image:NetworkImage(
+                      "https://image.api.playstation.com/vulcan/img/rnd/202105/1714/WHeOu95nW2SZQy6H5IKgE2Bg.png",
+                    ),
+                    fit:BoxFit.cover,
+                  ),
+                ),
+
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(width: 10),
+                  Text('Star Wars :IV' , style: TextStyle(color: Colors.white ,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600),
+                  ),
+                  Row(
+
+                    children: [
+                      SizedBox(width: 10),
+                      Icon(Icons.star, color: Colors.blue , size:14),
+                      Icon(Icons.star, color: Colors.blue , size:14),
+                      Icon(Icons.star_border, color: Colors.blue , size:14),
+                      Icon(Icons.star_border, color: Colors.blue , size:14),
+                      Icon(Icons.star_border, color: Colors.blue , size:14),
+                      SizedBox(width: 10),
+                      Text( '2.0 K reiews' , style: TextStyle(color: Colors.white ,
+                          fontWeight: FontWeight.w500),)
+                    ],
+                  ),
+                  Row(
+
+                    children: [
+
+                      SizedBox(width: 10),
+                      Icon(Icons.alarm, color: Colors.white ,size:14),
+                      SizedBox(width: 10),
+                      Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                          style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                    ],
+
+                  ),
+                  Row(
+
+                    children: [
+                      SizedBox(width: 10),
+                      Icon(Icons.calendar_today, color: Colors.white , size:14),
+                      SizedBox(width: 10),
+                      Text( '2019/2/1' , textDirection: TextDirection.rtl ,
+                          style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                    ],
+
+                  ),
+
+
+                ],
+              ),
+            ],
+          ),
+
+
+
+          ),//1
+          //2
+          Container   (
+
+            margin: EdgeInsets.all(8),
+            height: 100,
+            child:Row(
+              children:[
+                SizedBox(width: 10),
+                Container(
+
+                  width: 150,
+                  height: 200,
+                  decoration:  BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    // color: Colors.deepOrange,
+                    image:DecorationImage(
+                      image:NetworkImage(
+
+                        "https://uploads.dailydot.com/2020/08/avengers-5.jpg?fm=pjpg&ixlib=php-3.3.0",
+                      ),
+                      fit:BoxFit.cover,
+                    ),
+                  ),
+
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(width: 10),
+                    Text('Avengers :IV' , style: TextStyle(color: Colors.white ,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600),
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star_border, color: Colors.blue , size:14),
+                        Icon(Icons.star_border, color: Colors.blue , size:14),
+                        SizedBox(width: 10),
+                        Text( '2.6 K reviews' , style: TextStyle(color: Colors.white ,
+                            fontWeight: FontWeight.w500),)
+                      ],
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.alarm, color: Colors.white ,size:14),
+                        SizedBox(width: 10),
+                        Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.calendar_today, color: Colors.white , size:14),
+                        SizedBox(width: 10),
+                        Text( '2019/2/1' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+
+
+                  ],
+                ),
+              ],
+            ),
+
+
+
+          ),
+          //3
+          Container   (
+
+            margin: EdgeInsets.all(8),
+            height: 100,
+            child:Row(
+              children:[
+                SizedBox(width: 10),
+                Container(
+
+                  width: 150,
+                  height: 200,
+                  decoration:  BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    // color: Colors.deepOrange,
+                    image:DecorationImage(
+                      image:NetworkImage(
+
+                       "https://www.scifinow.co.uk/wp-content/uploads/2016/04/Spider-Man-Homecoming.jpg",
+                      ),
+                      fit:BoxFit.cover,
+                    ),
+                  ),
+
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(width: 10),
+                    Text('Spider Man ' , style: TextStyle(color: Colors.white ,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600),
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star_border, color: Colors.blue , size:14),
+                        Icon(Icons.star_border, color: Colors.blue , size:14),
+                        SizedBox(width: 10),
+                        Text( '1.3 K reviews' , style: TextStyle(color: Colors.white ,
+                            fontWeight: FontWeight.w500),)
+                      ],
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.alarm, color: Colors.white ,size:14),
+                        SizedBox(width: 10),
+                        Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.calendar_today, color: Colors.white , size:14),
+                        SizedBox(width: 10),
+                        Text( '2019/2/1' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+
+
+                  ],
+                ),
+              ],
+            ),
+
+
+
+          ),//3
+          //4
+          Container   (
+
+            margin: EdgeInsets.all(8),
+            height: 100,
+            child:Row(
+              children:[
+                SizedBox(width: 10),
+                Container(
+
+                  width: 150,
+                  height: 200,
+                  decoration:  BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    // color: Colors.deepOrange,
+                    image:DecorationImage(
+                      image:NetworkImage(
+
+                        "https://64.media.tumblr.com/8047747b591676109968406a79b7c682/a0ad71c55fb2f853-e1/s1280x1920/a1deb143d2871d07f24d226ad979bac7a1771f04.jpg",
+                      ),
+                      fit:BoxFit.cover,
+                    ),
+                  ),
+
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(width: 10),
+                    Text('Spider Woman' , style: TextStyle(color: Colors.white ,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600),
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        SizedBox(width: 10),
+                        Text( '32.6 K reviews' , style: TextStyle(color: Colors.white ,
+                            fontWeight: FontWeight.w500),)
+                      ],
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.alarm, color: Colors.white ,size:14),
+                        SizedBox(width: 10),
+                        Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.calendar_today, color: Colors.white , size:14),
+                        SizedBox(width: 10),
+                        Text( '2019/2/1' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+
+
+                  ],
+                ),
+              ],
+            ),
+
+
+
+          ),//4
+          //5
+          Container   (
+
+            margin: EdgeInsets.all(8),
+            height: 100,
+            child:Row(
+              children:[
+                SizedBox(width: 10),
+                Container(
+
+                  width: 150,
+                  height: 200,
+                  decoration:  BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    // color: Colors.deepOrange,
+                    image:DecorationImage(
+                      image:NetworkImage(
+
+                        "https://nerdbastards.com/wp-content/uploads/2013/02/ben10.jpg",
+                      ),
+                      fit:BoxFit.cover,
+                    ),
+                  ),
+
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(width: 10),
+                    Text('Ben 10' , style: TextStyle(color: Colors.white ,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600),
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        SizedBox(width: 10),
+                        Text( '50.6 K reviews' , style: TextStyle(color: Colors.white ,
+                            fontWeight: FontWeight.w500),)
+                      ],
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.alarm, color: Colors.white ,size:14),
+                        SizedBox(width: 10),
+                        Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.calendar_today, color: Colors.white , size:14),
+                        SizedBox(width: 10),
+                        Text( '2019/2/1' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+
+
+                  ],
+                ),
+              ],
+            ),
+
+
+
+          ),//5
+          //6
+          Container   (
+
+            margin: EdgeInsets.all(8),
+            height: 100,
+            child:Row(
+              children:[
+                SizedBox(width: 10),
+                Container(
+
+                  width: 150,
+                  height: 200,
+                  decoration:  BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    // color: Colors.deepOrange,
+                    image:DecorationImage(
+                      image:NetworkImage(
+
+                        "https://allhdwallpapers.com/wp-content/uploads/2015/04/batman-5-1024x640.jpg",
+                      ),
+                      fit:BoxFit.cover,
+                    ),
+                  ),
+
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(width: 10),
+                    Text('BatMan' , style: TextStyle(color: Colors.white ,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600),
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star, color: Colors.blue , size:14),
+                        Icon(Icons.star_border, color: Colors.blue , size:14),
+                        SizedBox(width: 10),
+                        Text( '3.6 K reviews' , style: TextStyle(color: Colors.white ,
+                            fontWeight: FontWeight.w500),)
+                      ],
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.alarm, color: Colors.white ,size:14),
+                        SizedBox(width: 10),
+                        Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+                    Row(
+
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.calendar_today, color: Colors.white , size:14),
+                        SizedBox(width: 10),
+                        Text( '2019/2/1' , textDirection: TextDirection.rtl ,
+                            style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                      ],
+
+                    ),
+
+
+                  ],
+                ),
+              ],
+            ),
+
+
+
+          ),//6
+        ],
+
+
+      ),
+
+
+      ),
+    ),
+    );
+  }
+}
+
+class Movie extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black45,
+appBar: AppBar(
+  backgroundColor: Colors.black54,
+),
+      body: Container(
+        child:ListView(children:[Column(
+          children: [
+            Container(
+
+              width: 500,
+              height: 500,
+              decoration:  BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                // color: Colors.deepOrange,
+                image:DecorationImage(
+                  image:NetworkImage(
+
+                    "https://cdn.al-ain.com/images/2019/12/27/78-202614-cinema-movie-star-wars-2.jpeg",
+                  ),
+                  fit:BoxFit.cover,
+                ),
+              ),
+
+            ),
+            Container(
+             child: Column(
+               children: [
+                 Row(
+
+                   children: [
+                     SizedBox(width: 10),
+                     Icon(Icons.star, color: Colors.blue , size:14),
+                     Icon(Icons.star, color: Colors.blue , size:14),
+                     Icon(Icons.star, color: Colors.blue , size:14),
+                     Icon(Icons.star, color: Colors.blue , size:14),
+                     Icon(Icons.star_border, color: Colors.blue , size:14),
+                     SizedBox(width: 10),
+                     Text( '3.6 K reviews' , style: TextStyle(color: Colors.white ,
+                         fontWeight: FontWeight.w500),)
+                   ],
+                 ),
+                 Row(
+
+                   children: [
+                     SizedBox(width: 10),
+                     Icon(Icons.alarm, color: Colors.white ,size:14),
+                     SizedBox(width: 10),
+                     Text( '2h 14m' , textDirection: TextDirection.rtl ,
+                         style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                   ],
+
+                 ),
+                 Row(
+
+                   children: [
+                     SizedBox(width: 10),
+                     Icon(Icons.calendar_today, color: Colors.white , size:14),
+                     SizedBox(width: 10),
+                     Text( '2019/2/1' , textDirection: TextDirection.rtl ,
+                         style: TextStyle(color: Colors.grey , fontWeight: FontWeight.w400)),
+                   ],
+
+                 ),
+        SizedBox(height: 10,),
+        Text("""When it's discovered that the evil Emperor Palpatine\ndid not die at the hands of Darth Vader\nthe rebels Iust race against the clock to find out\nhis whereabouts""" , style: TextStyle(color: Colors.white ,
+            fontSize: 15,
+            fontWeight: FontWeight.w600),
+
+             ),
+                 SizedBox(height: 10,),
+               ],
+             ),
+            ),
+      ],
+        ),
+
+    ],
+        ),
+      ),
+    );
+  }
+}
