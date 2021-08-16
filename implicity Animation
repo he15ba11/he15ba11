@@ -1,0 +1,87 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: ' Hello',
+    home: MyHomePage(),
+  ));
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(' Hello'),
+      ),
+      body:AnimationIpmlicity(),
+    );
+  }
+}
+class AnimationIpmlicity extends StatefulWidget {
+  @override
+  _AnimationIpmlicityState createState()=> _AnimationIpmlicityState();
+}
+class _AnimationIpmlicityState extends State<AnimationIpmlicity> {
+  double _opacity = 0.1;
+  bool show =true;
+  String text =" Show details";
+  @override
+  Widget build(BuildContext context) {
+
+    return Center(
+
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children:<Widget> [
+          Container(
+            //  duration: Duration(seconds: 1),
+            margin: EdgeInsets.all(10),
+            width: 200,
+            height: 200,
+            alignment: Alignment.center,
+            decoration:  BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              // color: Colors.deepOrange,
+              image:DecorationImage(
+                image:NetworkImage("https://raw.githubusercontent.com/flutter/website/master/src/images/owl.jpg"
+                ),
+                fit:BoxFit.fill,
+              ),
+            ),
+
+          ),
+          TextButton(
+            onPressed: (){
+              setState(() {
+               show=!show;
+                if(text=='Show details') text="Hide details";
+                else text= 'Show details'
+                ;
+              });
+    },
+            child:Text(text),
+
+          ),
+          Container (
+
+            child:AnimatedOpacity(
+              duration: Duration(milliseconds: 600),
+              opacity:show?1.0 :0.0 ,
+              child: Column(
+                children: [
+                Text("Type : Owl\nAge :39\nEmployment :None"),
+                         ],
+              ),
+              ),
+
+            ),
+
+        ],
+      ),
+    );
+
+  }
+}
