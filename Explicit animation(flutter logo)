@@ -1,0 +1,72 @@
+import 'dart:math';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: ' Hello',
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:AnimationBuilder(),
+    );
+  }
+}
+class AnimationBuilder extends StatefulWidget {
+  @override
+  _AnimationBuilderState createState()=> _AnimationBuilderState();
+}
+
+class _AnimationBuilderState extends State<AnimationBuilder> with SingleTickerProviderStateMixin {
+
+   late AnimationController  _controller;
+
+  get animation => null;
+
+
+  void initState(){
+    super.initState();
+    _controller =  AnimationController(
+      duration: const Duration(seconds: 4),
+      vsync: this,
+    )..repeat();
+
+
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Center (
+
+    child: AnimatedBuilder(
+        animation: animation,
+        child: FlutterLogo(),
+        builder: (context, child) {
+          var animation = Tween<double>(begin: 0, end: 2*pi).animate(_controller);
+          return Transform.rotate(
+            angle: animation.value,
+            child: Container(),
+          );
+        }
+
+        ),
+    );
+
+  }
+}
