@@ -23,7 +23,11 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:AnimationBuilder(),
+      appBar: AppBar(
+        title: Text(' Explicit Animation'),
+      ),
+      body:AnimationBuilder(
+      ),
     );
   }
 }
@@ -55,13 +59,17 @@ class _AnimationBuilderState extends State<AnimationBuilder> with SingleTickerPr
     return Center (
 
     child: AnimatedBuilder(
-        animation: animation,
-        child: FlutterLogo(),
-        builder: (context, child) {
+        animation: _controller,
+        child:Container (
+          width: 200.0,
+          height: 200.0,
+          child:FlutterLogo(),
+        ),
+        builder: (BuildContext context, Widget? child) {
           var animation = Tween<double>(begin: 0, end: 2*pi).animate(_controller);
           return Transform.rotate(
             angle: animation.value,
-            child: Container(),
+            child: child,
           );
         }
 
