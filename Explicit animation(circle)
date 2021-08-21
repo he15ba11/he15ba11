@@ -33,9 +33,9 @@ class _AnimationBuilderState extends State<AnimationBuilder> with SingleTickerPr
 
   late AnimationController  _controller;
 
-  Animation<double>? get curvedAnimation => null;
+  Animation<double>? get curvedAnimation =>CurvedAnimation(parent: _controller, curve: Curves.bounceOut);
 
-late Animation<RelativeRect> _animation;
+//late Animation<RelativeRect> _animation;
 
 
 @override
@@ -45,8 +45,7 @@ late Animation<RelativeRect> _animation;
       duration: const Duration(seconds: 4),
       vsync: this,
     )..repeat();
-    
-   final curvedAnimation = CurvedAnimation(parent: _controller, curve: Curves.bounceOut);
+  final curvedAnimation = CurvedAnimation(parent: _controller, curve: Curves.bounceOut);
 
   }
 
@@ -71,8 +70,8 @@ late Animation<RelativeRect> _animation;
 
             rect: RelativeRectTween (begin:RelativeRect.fromLTRB(0, 0, 0, 700), end: RelativeRect.fromLTRB(0, 700, 0, 0),
 
-              ).animate(curvedAnimation!),
-              
+              ).animate(_controller),
+
             )
           ],
       ),
